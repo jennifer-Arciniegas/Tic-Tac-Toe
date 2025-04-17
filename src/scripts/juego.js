@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (!estadoJuego.includes("")) {
         ganadorDisplay.textContent = "Empate";
-        
+        modalImage.src = "./src/img/fox_sock.png";
         modalMessage.textContent = "¡El juego ha terminado en empate!";
         modal.classList.remove("hidden");
         puntos = 2;
