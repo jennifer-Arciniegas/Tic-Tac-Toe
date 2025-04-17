@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+    <main class="grid grid-cols-2 min-h-screen">
+        <div class="bg-rose-100 p-4 flex flex-col items-center">
+            <form action="" id="jugadores" class="w-full max-w-md mt-32">
+                <label for="alias1" class="block text-gray-700">Nombre del jugador 1:</label>
+                <input type="text" name="alias1" id="alias1" class="rounded-lg focus:border-purple-500 focus:outline-none border border-gray-300 m-1 w-full p-2">
+                <br>
+                <label for="alias2" class="block text-gray-700">Nombre del jugador 2:</label>
+                <input type="text" name="alias2" id="alias2" class="rounded-lg focus:border-purple-500 focus:outline-none border border-gray-300 m-1 w-full p-2">
+                <br><br>
+                <div class="flex justify-center space-x-4">
+                    <button id="jugar" type="button" class="rounded-lg bg-sky-300 p-2 hover:bg-sky-500 text-white font-semibold">Jugar</button>
+                    <button id="ranking" type="button" class="rounded-lg bg-indigo-300 p-2 hover:bg-indigo-500 text-white font-semibold">Ranking de ganadores</button>
+                </div>
+                <div id="insertarHistorial" class="mt-6"></div>
+            </form>
+        </div>
+        <div class="bg-sky-300 p-4 flex flex-col items-center justify-center">
+            <h3 id="turnojugador" class="text-xl font-bold mb-4">Turno de: </h3>
+            <div id="tablero" class="bg-black w-80 h-80 grid grid-cols-3 grid-rows-3 gap-2 p-2 rounded-lg">
+                <div class="bg-white rounded-lg flex items-center justify-center text-4xl font-bold cursor-pointer"></div>
+                <div class="bg-white rounded-lg flex items-center justify-center text-4xl font-bold cursor-pointer"></div>
+                <div class="bg-white rounded-lg flex items-center justify-center text-4xl font-bold cursor-pointer"></div>
+                <div class="bg-white rounded-lg flex items-center justify-center text-4xl font-bold cursor-pointer"></div>
+                <div class="bg-white rounded-lg flex items-center justify-center text-4xl font-bold cursor-pointer"></div>
+                <div class="bg-white rounded-lg flex items-center justify-center text-4xl font-bold cursor-pointer"></div>
+                <div class="bg-white rounded-lg flex items-center justify-center text-4xl font-bold cursor-pointer"></div>
+                <div class="bg-white rounded-lg flex items-center justify-center text-4xl font-bold cursor-pointer"></div>
+                <div class="bg-white rounded-lg flex items-center justify-center text-4xl font-bold cursor-pointer"></div>
+            </div>
+            <h2 id="display" class="text-2xl font-semibold mt-4">Ganador: </h2>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full text-center">
+              <img id="modalImage" src="" alt="Game Result" class="mx-auto mb-4 w-24 h-24 object-contain">
+            <h2 id="modalMessage" class="text-2xl font-bold mb-4"></h2>
+            <button id="closeModal" class="rounded-lg bg-sky-300 p-2 hover:bg-sky-500 text-white font-semibold">Cerrar</button>
+        </div>
+    </div>
+
+   
+</body>
+<script src="./src/scripts/juego.js"></script>
+</html>
